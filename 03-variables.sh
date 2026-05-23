@@ -1,4 +1,4 @@
 #!/bin/bash
 
-TIME_STAMP = $(DATE)
+TIME_STAMP = $(date)
 echo " TIMESTAMP is $TIME_STAMP "
