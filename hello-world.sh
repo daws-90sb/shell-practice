@@ -1,4 +1,6 @@
 #!/bin/bash
 
-# this is command
-echo "Hello World I'm learning Devops"
+
+# this command
+
+echo "hello world"
