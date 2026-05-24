@@ -11,3 +11,5 @@ echo " sum is : $SUM "
 movies=("OKADU","VARANASI","ATHADU") # index always starts from 0
 echo " movies are : ${movies[@]} "
 echo " first movie is : ${movies[0]} "
+echo " first movie is : ${movies[1]} "
+echo " first movie is : ${movies[2]} "
