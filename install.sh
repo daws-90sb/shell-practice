@@ -18,11 +18,10 @@ else
 
 
     if [ $? -ne 0 ]; then
-
         echo " Installing mysql ...... FAILED!"
         exit 1
     else
-        echo " Installing mysql ...... SUCCEDED! 
+        echo " Installing mysql ...... SUCCEDED! "
      fi
 
 fi
