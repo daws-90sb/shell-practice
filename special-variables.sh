@@ -9,5 +9,8 @@ echo " script name : $0 "
 echo " who is running this script : $USER "
 echo " working on which directory : $PWD "
 echo " present user's home directory : $HOME "
-echo " process isnstance id of the script :  $$ " 
+echo " process instance id of the script :  $$ " 
 # process instance id will get created every time while running the script
+sleep 5 &
+
+echo " process instance if=d of background running command just now : $! "
