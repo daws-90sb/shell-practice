@@ -13,4 +13,4 @@ echo " process instance id of the script :  $$ "
 # process instance id will get created every time while running the script
 sleep 5 &
 
-echo " process instance if=d of background running command just now : $! "
+echo " process instance id of background running command just now : $! "
