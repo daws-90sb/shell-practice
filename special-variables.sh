@@ -14,3 +14,5 @@ echo " process instance id of the script :  $$ "
 sleep 5 &
 
 echo " process instance id of background running command just now : $! "
+
+wait $!
