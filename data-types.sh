@@ -8,5 +8,5 @@ SUM=$(($NUM1+$NUM2))
 echo " sum is : $SUM "
 
 # Array
-movies = ("OKADU","VARANASI","ATHADU")
+movies=("OKADU","VARANASI","ATHADU")
 echo " movies are : ${MOVIES[@]} "
