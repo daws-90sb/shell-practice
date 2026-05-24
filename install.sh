@@ -23,5 +23,7 @@ else
 
 echo " Installing mysql ...... SUCCEDED! "
 
+fi
+
 
  
