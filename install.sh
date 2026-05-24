@@ -8,7 +8,7 @@ if [ $USERID -ne 0 ]; then
    exit 1
 fi
 
-echo "I'm continuing...."
+#echo "I'm continuing...."
 if [ $? -eq 0 ]; then
    echo " Mysql already installed.....SKIPPING "
 
