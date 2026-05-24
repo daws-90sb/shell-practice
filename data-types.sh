@@ -9,4 +9,4 @@ echo " sum is : $SUM "
 
 # Array
 movies=("OKADU","VARANASI","ATHADU")
-echo " movies are : ${MOVIES[@]} "
+echo " movies are : ${movies[@]} "
