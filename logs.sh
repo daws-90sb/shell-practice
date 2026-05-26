@@ -1,0 +1,48 @@
+#!/bin/bash
+
+
+USERID=$(id -u)
+
+LOGS_DIR=/var/log/shell-script  #/home/ec2-user/shell-logs -> previous log files directory
+LOG_FILE=$LOGS_DIR/$0.log # /home/ec2-user/shell-logs/logs.sh.log -> previous log files irectory
+
+# check root access or not
+if [ $USERID -ne 0 ]; then 
+   echo " please run the script with root access "
+   exit 1
+fi
+
+VALIDATE(){
+    if [ $2 -ne 0 ]; then
+        echo " Installing $1 ...... FAILED!" | tee -a $LOG_FILE
+        exit 1
+    else
+        echo " Installing $1 ...... SUCCEDED! " | tee -a $LOG_FILE
+     fi
+}
+
+#echo "I'm continuing...."
+  dnf list installed mysql &>> $LOG_FILE
+
+if [ $? -eq 0 ]; then
+   echo " mysql already installed.....SKIPPING "
+
+else
+   echo "Installing mysql"
+   dnf install mysql -y &>> $LOG_FILE
+   VALIDATE mysql $?
+   
+fi
+
+#echo "I'm continuing...."
+  dnf list installed nginx &>> $LOG_FILE
+
+if [ $? -eq 0 ]; then
+   echo " nginx already installed.....SKIPPING "
+
+else
+   echo "Installing mysql"
+   dnf install nginx -y  &>> $LOG_FILE
+   VALIDATE nginx $?
+   
+fi
