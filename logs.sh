@@ -10,7 +10,7 @@ LOG_FILE=$LOGS_DIR/$0.log # /home/ec2-user/shell-logs/logs.sh.log -> previous lo
 if [ $USERID -ne 0 ]; then 
    echo " please run the script with root access "
    exit 1
-fi
+fi 
 
 VALIDATE(){
     if [ $2 -ne 0 ]; then
