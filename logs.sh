@@ -14,10 +14,10 @@ fi
 
 VALIDATE(){
     if [ $2 -ne 0 ]; then
-        echo " Installing $1 ...... FAILED!" | tee -a &>> $LOG_FILE
+        echo " Installing $1 ...... FAILED!" | tee -a $LOG_FILE
         exit 1
     else
-        echo " Installing $1 ...... SUCCEDED! " | tee -a &>> $LOG_FILE
+        echo " Installing $1 ...... SUCCEDED! " | tee -a $LOG_FILE
      fi
 }
 
@@ -25,7 +25,7 @@ VALIDATE(){
   dnf list installed mysql &>> $LOG_FILE
 
 if [ $? -eq 0 ]; then
-   echo " mysql already installed.....SKIPPING "
+   echo " mysql already installed.....SKIPPING " | tee -a $LOG_FILE
 
 else
    echo "Installing mysql"
@@ -38,7 +38,7 @@ fi
   dnf list installed nginx &>> $LOG_FILE
 
 if [ $? -eq 0 ]; then
-   echo " nginx already installed.....SKIPPING "
+   echo " nginx already installed.....SKIPPING " | tee -a $LOG_FILE
 
 else
    echo "Installing mysql"
