@@ -3,8 +3,8 @@
 
 USERID=$(id -u)
 
-LOGS_DIR=/home/ec2-user/shell-logs
-LOG_FILE=$LOGS_DIR/$0.log # /home/ec2-user/shell-logs/logs.sh.log
+LOGS_DIR=var/log/shell-script  #/home/ec2-user/shell-logs -> previous log files directory
+LOG_FILE=$LOGS_DIR/$0.log # /home/ec2-user/shell-logs/logs.sh.log -> previous log files irectory
 
 # check root access or not
 if [ $USERID -ne 0 ]; then 
