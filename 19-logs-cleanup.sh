@@ -25,6 +25,8 @@ fi
 while IFS= read -r FILE
 do
     echo "FILE to be deleted : $FILE"
+    rm -f $FILE
+    echo " File $FILE deleted "
 done <<< "$FILES"
 
 # < ---> INPUT Symbols
