@@ -6,4 +6,4 @@ do
 
 echo $line
 
-done < 01-hello-world.sh # while loop will access this file and takes the each line into loop on every turn 
+done < 01-install.sh # while loop will access this file and takes the each line into loop on every turn 
