@@ -8,3 +8,8 @@ if [ $# -lt 1 ]; then
     echo "USAGE: $0 <SOURCE_DIR> [days(optional to default 14)]"
     exit 1
 fi    
+
+if [ ! -d $SOURCE_DIR ]; then
+     echo "ERROR: Directory: $SOURCE_DIR does not exist"
+     exit 1
+fi     
