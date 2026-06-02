@@ -34,3 +34,9 @@ do
 
 done <<< "$FILES"
 
+TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
+ARCHIVE_FILE="$DEST_DIR/logs-archive-$TIMESTAMP.tar.gz"
+
+tar -czvf $ARCHIVE_FILE $FILES
+
+
