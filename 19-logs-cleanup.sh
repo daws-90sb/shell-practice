@@ -5,7 +5,7 @@ DAYS=${2:-14} # If $2 values is given then that values will be passed into days 
 
 if [ -z $SOURCE_DIR ]; then
     echo "ERROR :: Missing Parameters"
-    echo "USAGE: $0 <SOURCE_DIR> [days(optional to default 14)]"
+    echo "USAGE:: $0 <SOURCE_DIR> [days(optional to default 14)]"
     exit 1
 fi    
 
@@ -25,7 +25,7 @@ fi
 while IFS= read -r FILE
 do
     echo "FILE to be deleted : $FILE"
-    rm -f $FILE
+     #sudo rm -f $FILE
     echo " File $FILE deleted "
 done <<< "$FILES"
 
