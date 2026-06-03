@@ -28,15 +28,27 @@ if [ -z "$FILES" ]; then
    exit 0
 fi
 
-while IFS= read -r FILE
-do
-   echo "$FILE"
+# while IFS= read -r FILE
+# do
+#    echo "$FILE"
 
-done <<< "$FILES"
+# done <<< "$FILES"
 
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
 ARCHIVE_FILE="$DEST_DIR/logs-archive-$TIMESTAMP.tar.gz"
 
-tar -czvf $ARCHIVE_FILE $FILES &>> /dev/null
+tar -czvf $ARCHIVE_FILE $FILES 
+
+if [ $? -eq 0 ]; then
+   echo "Archieval is success, deleteing the files"
+   while IFS= read -r FILE
+   do
+       rm -f $FILE
+       echo "Delete file : $FILE"
+    done <<< "$FILES"
+else
+    echo "ERROR :: Archieval is failed"
+    exit 1
+fi        
 
 
