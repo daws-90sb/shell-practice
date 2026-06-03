@@ -54,3 +54,11 @@ else
 fi        
 
 
+# below r the commands that we execute for copying the script to another loca file i.e named backup and giving execute permissions scheduling in crontab -e and then executing
+# sudo cp 20-logs-archive.sh /usr/bin/backup
+# sudo chmod +x /usr/bin/backup
+# which backup
+# backup 
+# crontab -e
+#sudo cp 20-logs-archive.sh /usr/local/bin/backup
+
