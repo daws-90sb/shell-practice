@@ -18,3 +18,16 @@ echo "Content-Type: text/html"
 echo ""
 echo "$FINAL_BODY"
 } | msmtp "$TO_ADDRESS"
+
+{
+
+echo "TO_TEAM=$TO_TEAM"
+echo "ALERT_TYPE=$ALERT_TYPE"
+echo "SERVER_IP=$SERVER_IP"
+echo "MESSAGE=$MESSAGE"
+
+echo "-------------------"
+echo "$FINAL_BODY"
+echo "-------------------"
+
+}
