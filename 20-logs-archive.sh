@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PATH=/usr/local/bin:/usr/bin:/bin
+export PATH
 SOURCE_DIR=$1
 DEST_DIR=$2
 DAYS=${3:-14}
