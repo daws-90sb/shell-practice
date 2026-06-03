@@ -2,7 +2,7 @@
 
 DISK_USAGE=$(df -hT | grep -v Filesystem)
 USAGE_THRESHOLD=10
-SERVER_IP=&(curl http://169.254.169.254/latest/meta-data/local-ipv4) # this link is taken from google search => how i get server ip in aws ec2 curl command metadata
+SERVER_IP=&(curl -s http://169.254.169.254/latest/meta-data/local-ipv4) # this link is taken from google search => how i get server ip in aws ec2 curl command metadata
 
 while IFS= read -r line
 do
